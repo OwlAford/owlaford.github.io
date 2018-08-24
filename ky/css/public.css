@@ -1,0 +1,61 @@
+@charset "UTF-8";
+.app-close {
+  height: 18px;
+  width: 18px;
+  display: block;
+  background: url(../images/close.png) no-repeat center center;
+  background-size: 100% auto;
+  cursor: pointer;
+}
+
+.app-close.medium {
+  width: 16px;
+  height: 16px;
+}
+
+.app-close.small {
+  width: 10px;
+  height: 10px;
+}
+
+.app-zoom {
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background: url(../images/zoom.png) no-repeat;
+  background-size: 100% auto;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.app-zoom.in {
+  background-position: 0 100%;
+}
+
+.fc-up {
+  color: #91ca8b;
+}
+
+.fc-up:before {
+  content: '↑';
+}
+
+.fc-down {
+  color: #dd6a66;
+}
+
+.fc-down:before {
+  content: '↓';
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=maps/public.css.map */

@@ -1,0 +1,283 @@
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.app-btn-grp {
+  position: relative;
+}
+
+.app-btn-grp.center {
+  text-align: center;
+}
+
+.app-btn-grp .app-btn {
+  margin-right: 20px;
+}
+
+.app-btn {
+  background-color: #525665;
+  background-image: -webkit-linear-gradient(135deg, #313441, #808597);
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 13x;
+  padding: 10px 30px;
+  cursor: pointer;
+  border-radius: 3px;
+  min-width: 120px;
+}
+
+.app-btn:active {
+  background-color: #33363f;
+  background-image: -webkit-linear-gradient(135deg, #1f2129, #606472);
+}
+
+.app-btn.dangerous {
+  background-color: #d0504d;
+  background-image: -webkit-linear-gradient(135deg, #c33633, #dd6a66);
+}
+
+.app-btn.dangerous:active {
+  background-color: #b44442;
+  background-image: -webkit-linear-gradient(135deg, #a72f2d, #dd6a66);
+}
+
+.app-btn.hollow {
+  background: none;
+  border: 1px solid #7f8fa4;
+  color: #7f8fa4;
+}
+
+.app-btn.hollow:active {
+  background-color: #7f8fa4;
+  color: #fff;
+}
+
+.app-btn.warning {
+  background-color: #ef904a;
+  background-image: -webkit-linear-gradient(135deg, #ea7e53, #f49f42);
+}
+
+.app-btn.warning:active {
+  background-color: #d37e41;
+  background-image: -webkit-linear-gradient(135deg, #ca6d49, #d68a39);
+}
+
+.app-btn.large {
+  font-size: 16px;
+  padding: 15px 40px;
+  border-radius: 5px;
+}
+
+.app-checkbox-item {
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+  background: url(../images/checkbox.png) no-repeat;
+  background-size: 100% auto;
+  position: relative;
+}
+
+.app-checkbox-item input.app-checkbox[type='checkbox'] {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.app-checkbox-item.indeterminate {
+  background-position: 0 100%;
+}
+
+.app-checkbox-item.checked {
+  background-position: 0 50%;
+}
+
+.app-table {
+  position: relative;
+  font-size: 12px;
+  margin: 20px auto;
+}
+
+.app-table table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.app-table table th, .app-table table td {
+  padding: 10px 15px;
+  text-align: center;
+  border: none;
+}
+
+.app-table table td {
+  color: #e3e3e5;
+}
+
+.app-table table th, .app-table table tr.odd td {
+  background-color: #292c39;
+}
+
+.app-dialog {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 300%;
+  z-index: 999;
+}
+
+.app-dialog.show {
+  left: 0;
+  right: 0;
+}
+
+.app-dialog.show .dialog-mask {
+  opacity: 0.4;
+}
+
+.app-dialog.show .dialog-box {
+  -webkit-animation: zoomIn .2s;
+  animation: zoomIn .2s;
+}
+
+.app-dialog .dialog-mask {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.app-dialog .dialog-box {
+  position: absolute;
+  width: 680px;
+  min-height: 200px;
+  left: 50%;
+  top: 50%;
+  margin: -200px -340px;
+  background-color: #292c39;
+  padding: 15px 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 8px 20px -4px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 8px 20px -4px rgba(0, 0, 0, 0.6);
+}
+
+.app-dialog .dialog-box .box-title {
+  font-size: 16px;
+  font-weight: normal;
+  color: #e3e3e5;
+}
+
+.app-dialog .dialog-box .app-close {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+input.app-input {
+  padding: 15px 20px;
+  font-size: 13px;
+  background-color: transparent;
+  border: 1px solid #7f8fa4;
+  border-radius: 3px;
+  color: #e3e3e5;
+  outline: none;
+}
+
+input.app-input::-webkit-input-placeholder {
+  font-size: 12px;
+  color: #7f8fa4;
+}
+
+input.app-input::-moz-placeholder {
+  font-size: 12px;
+  color: #7f8fa4;
+}
+
+input.app-input::-ms-input-placeholder {
+  font-size: 12px;
+  color: #7f8fa4;
+}
+
+input.app-input:focus {
+  background-color: #434a59;
+}
+
+input.app-input:disabled {
+  font-size: 14px;
+  color: #7f8fa4;
+}
+
+input.app-input.error {
+  border-color: #dd6a66;
+}
+
+.app-label-input-group {
+  display: inline-block;
+  margin: 0 20px 10px;
+}
+
+.app-label-input-group input.app-input {
+  width: 234px;
+}
+
+.app-label-input-group label {
+  font-size: 12px;
+  display: block;
+  color: #7f8fa4;
+  margin: 10px 0;
+}
+
+table.app-growth-list {
+  width: 100%;
+  border-spacing: 0;
+  font-size: 12px;
+  line-height: 32px;
+}
+
+table.app-growth-list td {
+  color: #e3e3e5;
+}
+
+table.app-growth-list .growth-label {
+  padding: 3px 10px;
+  background-color: #73a372;
+  margin: 0 5px;
+  border-radius: 3px;
+}
+
+table.app-growth-list .growth-label.red {
+  background-color: #dd6a66;
+}
+
+/*# sourceMappingURL=maps/common.css.map */

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>开元管理后台</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+    <script src="../js/spin.min.js"></script>
+    <script src="../js/common.js"></script>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="app-btn-grp">
+        <button class="app-btn" id="addBtn">添加公告</button>
+        <button class="app-btn dangerous">批量删除</button>
+      </div>
+      <div class="app-table" cellpadding="0" cellspacing="0">
+        <table>
+          <tr>
+            <th class="item">
+              <div class="app-checkbox-item indeterminate">
+                <input class="app-checkbox" type="checkbox">
+              </div>
+            </th>
+            <th>代理昵称</th>
+            <th>当日盈利</th>
+            <th>当日新增</th>
+            <th>当日活跃</th>
+            <th>当日注单量</th>
+            <th>当日投注量</th>
+            <th>当日人均输赢</th>
+            <th>当月盈利</th>
+            <th>同比</th>
+            <th>环比</th>
+          </tr>
+          <tr>
+            <td class="item">
+              <div class="app-checkbox-item">
+                <input class="app-checkbox" type="checkbox">
+              </div>
+            </td>
+            <td>GPK</td>
+            <td>10,000,000</td>
+            <td>10,000</td>
+            <td>10,000</td>
+            <td>10,000,000</td>
+            <td>10,000,000,000</td>
+            <td>100</td>
+            <td>10,000,000</td>
+            <td><span class="fc-up">10.5%</span></td>
+            <td><span class="fc-down">10.5%</span></td>
+          </tr>
+          <tr class="odd">
+            <td class="item">
+              <div class="app-checkbox-item checked">
+                <input class="app-checkbox" type="checkbox" checked>
+              </div>
+            </td>
+            <td>娱乐先锋</td>
+            <td>10,000,000</td>
+            <td>10,000</td>
+            <td>10,000</td>
+            <td>10,000,000</td>
+            <td>10,000,000,000</td>
+            <td>100</td>
+            <td>10,000,000</td>
+            <td><span class="fc-up">10.5%</span></td>
+            <td><span class="fc-down">10.5%</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="app-dialog">
+      <div class="dialog-mask"></div>
+      <div class="dialog-box">
+        <div class="box-title">大标题</div>
+        <div class="fm-list">
+          <div class="row-item">
+            <div class="app-label-input-group">
+              <label>小标题</label>
+              <input class="app-input" type="text" value="已输入文本" placeholder="请输入文本内容">
+            </div>
+            <div class="app-label-input-group">
+              <label>小标题</label>
+              <input class="app-input error" type="text" value="输入了错误内容" placeholder="请输入文本内容">
+            </div>
+          </div>
+          <div class="row-item">
+            <div class="app-label-input-group">
+              <label>小标题</label>
+              <input class="app-input" type="text" placeholder="请输入文本内容">
+            </div>
+            <div class="app-label-input-group">
+              <label>小标题</label>
+              <input class="app-input" type="text" value="不可更改" disabled placeholder="请输入文本内容">
+            </div>
+          </div>
+          <div class="app-btn-grp center mt30">
+            <button class="app-btn hollow">取消</button>
+            <button class="app-btn warning">确定</button>
+          </div>
+        </div>
+        <div class="app-close medium"></div>
+      </div>
+    </div>
+    <script>$(function () {
+  // checkbox 选框切换
+  $('.app-checkbox-item').on('click', function () {
+    var $cur = $(this);
+    $cur.removeClass('indeterminate');
+    $cur.find('input:checked').length ? $cur.removeClass('checked') : $cur.addClass('checked');
+  });
+
+  // 打开弹框
+  var $dialog = $('.app-dialog');
+  $('#addBtn').on('click', function () {
+    $dialog.addClass('show');
+  });
+
+  // 关闭弹框
+  $('.dialog-box .app-close').on('click', function () {
+    $dialog.removeClass('show');
+  });
+});
+
+    </script>
+  </body>
+</html>
