@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><!--[if IE]><link rel="icon" href="/starry/favicon.ico"><![endif]--><title>carbon-altas</title><script>(function (baseFontSize, fontscale) {
+        var _baseFontSize = baseFontSize || 100;
+        var _fontscale = fontscale || 1;
+        var win = window;
+        var doc = win.document;
+        var ua = navigator.userAgent;
+        var matches = ua.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i);
+        var UCversion = ua.match(/U3\/((\d+|\.){5,})/i);
+        var isUCHd = UCversion && parseInt(UCversion[1].split('.').join(''), 10) >= 80;
+        var isIos = navigator.appVersion.match(/(iphone|ipad|ipod)/gi);
+        var dpr = win.devicePixelRatio || 1;
+        if (!isIos && !(matches && matches[1] > 534) && !isUCHd) {
+          // 如果非iOS, 非Android4.3以上, 非UC内核, 就不执行高清, dpr设为1;
+          dpr = 1;
+        }
+        var scale = 1 / dpr;
+        var metaEl = doc.querySelector('meta[name="viewport"]');
+        if (!metaEl) {
+          metaEl = doc.createElement('meta');
+          metaEl.setAttribute('name', 'viewport');
+          doc.head.appendChild(metaEl);
+        }
+        metaEl.setAttribute('content', 'width=device-width,user-scalable=no,initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale);
+        win.dpr = dpr;
+        win.rootFontSize = _baseFontSize / 2 * dpr * _fontscale;
+        doc.documentElement.style.fontSize = win.rootFontSize + 'px';
+      })();</script><script src=https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.simple.min.js></script><script src="https://webapi.amap.com/maps?v=1.4.0&key=f582aead07ca97967fea0637d51e98ac"></script><link href=/starry/js/asset.05c35513.js rel=prefetch><link href=/starry/js/center.002c6983.js rel=prefetch><link href=/starry/js/channel.81570425.js rel=prefetch><link href=/starry/js/gyro.952b46c2.js rel=prefetch><link href=/starry/js/home.0d56e35b.js rel=prefetch><link href=/starry/js/map.20c018ea.js rel=prefetch><link href=/starry/js/pixel.4965a30d.js rel=prefetch><link href=/starry/js/scroll.cd5f6962.js rel=prefetch><link href=/starry/js/sector.66ccd464.js rel=prefetch><link href=/starry/js/star.760e7f62.js rel=prefetch><link href=/starry/js/wave.81370eff.js rel=prefetch><link href=/starry/css/app.de5349f4.css rel=preload as=style><link href=/starry/css/chunk-vendors.21a5d729.css rel=preload as=style><link href=/starry/js/app.c1f0a89e.js rel=preload as=script><link href=/starry/js/chunk-vendors.48fb2b53.js rel=preload as=script><link href=/starry/css/chunk-vendors.21a5d729.css rel=stylesheet><link href=/starry/css/app.de5349f4.css rel=stylesheet><link rel=icon type=image/png sizes=32x32 href=/starry/img/icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/starry/img/icons/favicon-16x16.png><link rel=manifest href=/starry/manifest.json><meta name=theme-color content=#4DBA87><meta name=apple-mobile-web-app-capable content=no><meta name=apple-mobile-web-app-status-bar-style content=default><meta name=apple-mobile-web-app-title content=carbon-altas><link rel=apple-touch-icon href=/starry/img/icons/apple-touch-icon-152x152.png><link rel=mask-icon href=/starry/img/icons/safari-pinned-tab.svg color=#4DBA87><meta name=msapplication-TileImage content=/starry/img/icons/msapplication-icon-144x144.png><meta name=msapplication-TileColor content=#000000></head><body><noscript><strong>We're sorry but carbon-altas doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div class=app-wrap><div id=MOUNT_NODE></div></div><script src=/starry/js/chunk-vendors.48fb2b53.js></script><script src=/starry/js/app.c1f0a89e.js></script></body></html>
