@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox-sw.js");
 
 importScripts(
-  "/starry/precache-manifest.fb27f589eed9c02f113b030684e3ce29.js"
+  "/starry/precache-manifest.072f7554a7fc1a837e17588dd1444a85.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "carbon-altas"});
